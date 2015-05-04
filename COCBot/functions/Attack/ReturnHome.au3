@@ -37,9 +37,11 @@ Func ReturnHome($TakeSS = 1, $GoldChangeCheck = True) ;Return main screen
 		SetLog("Taking snapshot of your loot", $COLOR_GREEN)
 		Local $Date = @YEAR & "-" & @MON & "-" & @MDAY
 		Local $Time = @HOUR & "." & @MIN
+		Local $SearchCountTXT =  (   StringFormat("%s", $SearchCount))
+		Local $LootFileName =  $Date & "_" & $Time & "_" & $SearchCountTXT & ".jpg"
 		_CaptureRegion(0, 0, 860, 675)
 		$hBitmap_Scaled = _GDIPlus_ImageResize($hBitmap, _GDIPlus_ImageGetWidth($hBitmap) / 2, _GDIPlus_ImageGetHeight($hBitmap) / 2) ;resize image
-		_GDIPlus_ImageSaveToFile($hBitmap_Scaled, $dirLoots & $Date & "_" & $Time & ".jpg")
+		_GDIPlus_ImageSaveToFile($hBitmap_Scaled, $dirLoots & $LootFileName)
 		;attackReport()
 	EndIf
 
