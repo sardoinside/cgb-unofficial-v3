@@ -181,6 +181,12 @@ Func saveConfig() ;Saves the controls settings to the config
 	Else
 		IniWrite($config, "attack", "use-cc", 0)
 	EndIf
+	
+	If GUICtrlRead($chkUseClanCastleBalanced) = $GUI_CHECKED Then
+		IniWrite($config, "attack", "use-cc-balanced", 1)
+	Else
+  		IniWrite($config, "attack", "use-cc-balanced", 0)
+	EndIf
 
 	If GUICtrlRead($radManAbilities) = $GUI_CHECKED Then
 		IniWrite($config, "attack", "ActivateKQ", "Manual")
