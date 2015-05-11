@@ -342,3 +342,9 @@ Global $DESTOLoc = ""
 
 Global $dropAllOnSide=1
 Global $checkHeroesByHealth = False
+
+; Info Profile
+Global $AttacksWon = 0
+Global $DefensesWon = 0
+Global $TroopsDonated = 0
+Global $TroopsReceived = 0
