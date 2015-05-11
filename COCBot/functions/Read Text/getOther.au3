@@ -110,6 +110,17 @@ Func getOther($x_start, $y_start, $type, $totalcamp = false)
             $Number &= getDigit($x, $y, "Other")
             $Number &= getDigit($x, $y, "Other")
             $Number &= getDigit($x, $y, "Other")
+	Case "MyProfile"
+     	    $Number = getDigitProfile($x, $y, "MyProfile")
+	    While $Number = ""
+                If $i >= 70 Then ExitLoop
+                $i += 1
+                $x += 1
+                $Number = getDigitProfile($x, $y, "MyProfile")
+            WEnd
+            $Number &= getDigitProfile($x, $y, "MyProfile")
+            $Number &= getDigitProfile($x, $y, "MyProfile")
+            $Number &= getDigitProfile($x, $y, "MyProfile")            
     EndSwitch
 
     Return $Number
