@@ -109,3 +109,4 @@
 
 #include "functions\Village\LocateSpell.au3"
 #include "functions\Village\Spell.au3"
+#include "functions\Village\ProfileReport.au3"
