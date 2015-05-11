@@ -1737,3 +1737,7 @@ $tiExit = TrayCreateItem("Exit")
 
 GUISetState(@SW_SHOW)
 CheckPrerequisites()
+
+
+; mod balance donated/requested 
+Global $checkUseClanCastleBalanced ; Use Clan Castle Balanced settings
