@@ -196,6 +196,12 @@ Func applyConfig() ;Applies the data from config to the controls in GUI
 		GUICtrlSetState($chkUseClanCastle, $GUI_UNCHECKED)
 	EndIf
 
+	If $checkUseClanCastleBalanced = 1 Then
+  		GUICtrlSetState($chkUseClanCastleBalanced, $GUI_CHECKED)
+	Else
+  		GUICtrlSetState($chkUseClanCastleBalanced, $GUI_UNCHECKED)
+	EndIf
+
 	Switch $iActivateKQCondition
 		Case "Manual"
 			GUICtrlSetState($radManAbilities, $GUI_CHECKED)
