@@ -102,6 +102,7 @@ Func readConfig() ;Reads config and sets it to the variables
 		$QueenAttack[2] = IniRead($config, "attack", "queen-all", "0")
 
 		$checkUseClanCastle = IniRead($config, "attack", "use-cc", "0")
+		$checkUseClanCastleBalanced = IniRead($config, "attack", "use-cc-balanced", "0")
 
 		$iActivateKQCondition = IniRead($config, "attack", "ActivateKQ", "Manual")
 		$delayActivateKQ = (1000 * IniRead($config, "attack", "delayActivateKQ", "9"))
